@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="SPORTIX — پلتفرم نمایشی تحلیل مسابقات ورزشی">
+<title>SPORTIX | تحلیل مسابقات ورزشی</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap');
+
+:root{
+  --bg:#070b12;--bg2:#0c1220;--card:#101827;--card2:#131e2f;
+  --text:#eef5ff;--muted:#8d9bb0;--line:#1d2a3d;
+  --green:#27e59b;--blue:#4d8dff;--red:#ff5d68;--orange:#ffad42;
+  --shadow:0 18px 55px rgba(0,0,0,.25);--radius:20px;
+}
+body.light{
+  --bg:#f3f6fb;--bg2:#fff;--card:#fff;--card2:#f4f7fb;
+  --text:#111827;--muted:#64748b;--line:#dfe6ef;
+  --shadow:0 15px 40px rgba(40,60,90,.12);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Vazirmatn,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.8;overflow-x:hidden;transition:.3s}
+button,input{font:inherit}
+button{cursor:pointer}
+a{color:inherit;text-decoration:none}
+.container{width:min(1180px,92%);margin:auto}
+header{position:fixed;top:0;left:0;right:0;height:74px;background:rgba(7,11,18,.82);backdrop-filter:blur(18px);border-bottom:1px solid var(--line);z-index:1000}
+body.light header{background:rgba(255,255,255,.86)}
+.nav{height:100%;display:flex;align-items:center;justify-content:space-between;gap:25px}
+.logo{font-size:25px;font-weight:800;letter-spacing:1px}.logo span{color:var(--green)}
+.navlinks{display:flex;gap:25px;color:var(--muted);font-size:14px}.navlinks a:hover{color:var(--text)}
+.actions{display:flex;align-items:center;gap:9px}
+.icon-btn,.login{border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:12px;padding:9px 13px}
+.login{background:var(--green);color:#04110b;border:0;font-weight:700}
+.menu{display:none}
+.hero{padding:150px 0 80px;min-height:650px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:50px}
+.badge{display:inline-flex;align-items:center;gap:7px;background:rgba(39,229,155,.1);color:var(--green);border:1px solid rgba(39,229,155,.22);padding:6px 12px;border-radius:999px;font-size:12px;font-weight:700}
+.hero h1{font-size:clamp(38px,5vw,68px);line-height:1.2;margin:18px 0}
+.hero h1 span{color:var(--green)}
+.hero p{color:var(--muted);max-width:620px;font-size:16px}
+.primary{display:inline-flex;align-items:center;justify-content:center;background:var(--green);color:#04110b;border:0;border-radius:13px;padding:12px 20px;font-weight:800;margin-top:25px;transition:.25s}
+.primary:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(39,229,155,.2)}
+.hero-art{position:relative;height:390px;background:linear-gradient(145deg,var(--card),var(--card2));border:1px solid var(--line);border-radius:32px;box-shadow:var(--shadow);overflow:hidden;display:grid;place-items:center}
+.orbit{width:270px;height:270px;border:1px solid rgba(77,141,255,.25);border-radius:50%;position:absolute;animation:spin 18s linear infinite}
+.orbit:before,.orbit:after{content:"";position:absolute;width:13px;height:13px;border-radius:50%;background:var(--green);box-shadow:0 0 25px var(--green)}
+.orbit:before{top:22px;left:42px}.orbit:after{bottom:40px;right:22px;background:var(--blue);box-shadow:0 0 25px var(--blue)}
+.ball{font-size:110px;filter:drop-shadow(0 20px 25px rgba(0,0,0,.35));animation:float 3s ease-in-out infinite}
+.stat-float{position:absolute;padding:13px 16px;border:1px solid var(--line);background:rgba(16,24,39,.88);backdrop-filter:blur(10px);border-radius:15px;font-size:12px}
+.stat-float b{display:block;font-size:19px;color:var(--green)}.sf1{top:35px;right:30px}.sf2{bottom:35px;left:30px}
+section{padding:78px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:28px}.eyebrow{color:var(--green);font-size:12px;font-weight:800}.section-head h2{font-size:30px;margin-top:5px}.section-head p{color:var(--muted);font-size:13px}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}.filter{background:var(--card);border:1px solid var(--line);color:var(--muted);padding:8px 15px;border-radius:999px}.filter.active,.filter:hover{background:var(--green);color:#04110b;border-color:var(--green)}
+.search{background:var(--card);border:1px solid var(--line);border-radius:13px;color:var(--text);padding:10px 14px;min-width:210px;outline:none}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);transition:.25s}
+.card:hover{transform:translateY(-4px);border-color:rgba(77,141,255,.35)}
+.match-top{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:11px}.sport{color:var(--blue)}
+.status{padding:4px 9px;border-radius:999px;background:rgba(39,229,155,.1);color:var(--green)}
+.teams{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;text-align:center;gap:10px;padding:24px 0}
+.team-icon{width:48px;height:48px;display:grid;place-items:center;border-radius:14px;background:var(--card2);font-size:23px;margin:auto}.teams strong{display:block;margin-top:7px;font-size:13px}.vs{font-size:11px;color:var(--muted)}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.metric{background:var(--card2);border-radius:12px;padding:8px;text-align:center;font-size:10px;color:var(--muted)}.metric b{display:block;color:var(--text);font-size:14px}
+.details{margin-top:14px;width:100%;border:1px solid var(--line);background:transparent;color:var(--text);border-radius:11px;padding:9px}.details:hover{border-color:var(--blue)}
+.analysis{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}
+.chart{height:230px;display:flex;align-items:end;gap:10px;padding:20px 5px 5px}.bar{flex:1;border-radius:8px 8px 3px 3px;background:linear-gradient(to top,var(--blue),var(--green));min-height:20px;animation:grow .9s ease both}.chart-labels{display:flex;justify-content:space-around;color:var(--muted);font-size:10px}
+.h2h{display:grid;gap:12px}.row{display:flex;justify-content:space-between;padding:11px;border-bottom:1px solid var(--line);font-size:12px}.row:last-child{border:0}
+.live-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}.live-card{display:flex;justify-content:space-between;align-items:center;gap:15px}.live-dot{color:var(--red);font-size:11px}.score{font-size:24px;font-weight:800}.time{color:var(--orange);font-size:12px}
+.table-wrap{overflow-x:auto;background:var(--card);border:1px solid var(--line);border-radius:18px}.table{width:100%;border-collapse:collapse;min-width:650px}.table th,.table td{text-align:right;padding:15px;border-bottom:1px solid var(--line);font-size:12px}.table th{color:var(--muted);font-weight:500}.rank{font-weight:800;color:var(--green)}
+.news-grid{grid-template-columns:repeat(3,1fr)}.news-img{height:145px;border-radius:15px;background:linear-gradient(135deg,#132a4a,#102d28);display:grid;place-items:center;font-size:55px;margin-bottom:15px}.news-card h3{font-size:15px;line-height:1.6}.news-meta{font-size:10px;color:var(--muted);margin:8px 0}.news-card p{font-size:11px;color:var(--muted)}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:20px}.about-box{background:linear-gradient(145deg,var(--card),var(--card2));border:1px solid var(--line);border-radius:24px;padding:30px}.about-box h2{margin-bottom:12px}.about-box p{color:var(--muted);font-size:14px}.notice{border-right:3px solid var(--green);padding-right:15px;margin-top:18px}
+footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:11px}.footer{display:flex;justify-content:space-between;gap:15px}
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,.7);backdrop-filter:blur(5px);display:none;place-items:center;z-index:2000;padding:20px}.overlay.show{display:grid}.modal{width:min(520px,100%);background:var(--card);border:1px solid var(--line);border-radius:23px;padding:25px;animation:pop .25s ease}.modal-head{display:flex;justify-content:space-between;align-items:center}.close{border:0;background:var(--card2);color:var(--text);width:35px;height:35px;border-radius:10px}.modal-content{color:var(--muted);font-size:13px;margin-top:15px}.loading{position:fixed;inset:0;background:var(--bg);z-index:5000;display:grid;place-items:center;transition:.5s}.loader{width:42px;height:42px;border:3px solid var(--line);border-top-color:var(--green);border-radius:50%;animation:spin .7s linear infinite}
+.reveal{opacity:0;transform:translateY(20px);transition:.7s}.reveal.visible{opacity:1;transform:none}
+@keyframes spin{to{transform:rotate(360deg)}}@keyframes float{50%{transform:translateY(-12px)}}@keyframes grow{from{height:0}}@keyframes pop{from{opacity:0;transform:scale(.95)}}
+@media(max-width:850px){.hero{grid-template-columns:1fr;padding-top:125px}.hero-art{height:300px}.grid,.news-grid{grid-template-columns:repeat(2,1fr)}.analysis,.about{grid-template-columns:1fr}.navlinks{position:absolute;top:74px;right:0;left:0;background:var(--bg2);border-bottom:1px solid var(--line);display:none;padding:15px;flex-direction:column}.navlinks.open{display:flex}.menu{display:block}.login{display:none}}
+@media(max-width:600px){.hero h1{font-size:39px}.grid,.live-grid,.news-grid{grid-template-columns:1fr}.section-head{align-items:flex-start;flex-direction:column}.search{width:100%}.footer{flex-direction:column}.hero-art{height:270px}.ball{font-size:80px}.stat-float{transform:scale(.85)}}
+</style>
+</head>
+<body>
+<div class="loading" id="loading"><div class="loader" aria-label="در حال بارگذاری"></div></div>
+
+<header>
+  <div class="container nav">
+    <a class="logo" href="#home">SPORT<span>IX</span></a>
+    <nav class="navlinks" id="navlinks" aria-label="منوی اصلی">
+      <a href="#home">خانه</a><a href="#matches">مسابقات</a><a href="#analysis">تحلیل‌ها</a><a href="#about">درباره پروژه</a>
+    </nav>
+    <div class="actions">
+      <button class="icon-btn" id="themeBtn" aria-label="تغییر حالت نمایش">☀️</button>
+      <button class="login">ورود</button>
+      <button class="icon-btn menu" id="menuBtn" aria-label="باز کردن منو">☰</button>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="hero container" id="home">
+  <div class="reveal">
+    <span class="badge">● DEMO • آموزشی</span>
+    <h1>دنیای ورزش را<br><span>بهتر تحلیل کن</span></h1>
+    <p>یک داشبورد نمایشی برای مشاهده مسابقات، آمار تیم‌ها، نتایج اخیر و تحلیل عملکرد؛ تمام داده‌ها در این پروژه ساختگی و صرفاً برای نمایش رابط کاربری هستند.</p>
+    <a class="primary" href="#matches">مشاهده مسابقات ←</a>
+  </div>
+  <div class="hero-art reveal" aria-hidden="true">
+    <div class="orbit"></div><div class="ball">⚽</div>
+    <div class="stat-float sf1"><b>87%</b> دقت تحلیل نمایشی</div>
+    <div class="stat-float sf2"><b>24/7</b> داشبورد زنده</div>
+  </div>
+</section>
+
+<section id="matches">
+<div class="container">
+  <div class="section-head reveal"><div><div class="eyebrow">MATCH CENTER</div><h2>مسابقات امروز</h2></div><p>داده‌های کاملاً ساختگی برای Demo</p></div>
+  <div class="filters">
+    <button class="filter active" data-sport="all">همه</button><button class="filter" data-sport="football">⚽ فوتبال</button><button class="filter" data-sport="basketball">🏀 بسکتبال</button><button class="filter" data-sport="volleyball">🏐 والیبال</button><button class="filter" data-sport="tennis">🎾 تنیس</button>
+    <input class="search" id="teamSearch" placeholder="جستجوی تیم..." aria-label="جستجوی تیم">
+  </div>
+  <div class="grid" id="matchesGrid"></div>
+</div>
+</section>
+
+<section id="analysis">
+<div class="container">
+  <div class="section-head reveal"><div><div class="eyebrow">DATA INSIGHTS</div><h2>تحلیل آماری</h2></div><p>نمونه داشبورد عملکرد</p></div>
+  <div class="analysis">
+    <div class="card reveal"><h3>روند عملکرد اخیر</h3><div class="chart" id="chart"></div><div class="chart-labels"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span></div></div>
+    <div class="card reveal"><h3>Head to Head</h3><div class="h2h"><div class="row"><span>برد تیم آبی</span><b>4</b></div><div class="row"><span>برد تیم سبز</span><b>2</b></div><div class="row"><span>مساوی</span><b>1</b></div><div class="row"><span>میانگین امتیاز</span><b>2.8</b></div></div></div>
+  </div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="section-head reveal"><div><div class="eyebrow">LIVE CENTER</div><h2>مسابقات زنده</h2></div><p id="clock">--:--:--</p></div>
+<div class="live-grid">
+  <div class="card live-card reveal"><div><span class="live-dot">● LIVE</span><h3>North City FC</h3><small>vs River United</small></div><div><div class="score">2 — 1</div><div class="time">دقیقه 67'</div></div></div>
+  <div class="card live-card reveal"><div><span class="live-dot">● LIVE</span><h3>Tehran Waves</h3><small>vs Blue Stars</small></div><div><div class="score">74 — 68</div><div class="time">Q4</div></div></div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="section-head reveal"><div><div class="eyebrow">LEAGUE TABLE</div><h2>جدول لیگ</h2></div></div>
+<div class="table-wrap reveal"><table class="table"><thead><tr><th>Position</th><th>Team</th><th>Played</th><th>Won</th><th>Draw</th><th>Lost</th><th>Points</th></tr></thead><tbody>
+<tr><td class="rank">01</td><td>North City FC</td><td>12</td><td>9</td><td>2</td><td>1</td><td>29</td></tr>
+<tr><td class="rank">02</td><td>River United</td><td>12</td><td>8</td><td>3</td><td>1</td><td>27</td></tr>
+<tr><td class="rank">03</td><td>Blue Mountain</td><td>12</td><td>7</td><td>2</td><td>3</td><td>23</td></tr>
+<tr><td class="rank">04</td><td>Green Valley</td><td>12</td><td>6</td><td>3</td><td>3</td><td>21</td></tr>
+</tbody></table></div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="section-head reveal"><div><div class="eyebrow">SPORTS NEWS</div><h2>اخبار ورزشی</h2></div></div>
+<div class="grid news-grid">
+<div class="card news-card reveal"><div class="news-img">🏆</div><h3>رقابت نزدیک در هفته پایانی لیگ</h3><div class="news-meta">امروز • فوتبال</div><p>گزارشی ساختگی از نتایج و عملکرد تیم‌ها در یک هفته فرضی.</p></div>
+<div class="card news-card reveal"><div class="news-img">🏀</div><h3>ستاره جوان رکورد امتیاز را شکست</h3><div class="news-meta">دیروز • بسکتبال</div><p>یک خبر نمونه برای نمایش کارت‌های خبری در رابط کاربری.</p></div>
+<div class="card news-card reveal"><div class="news-img">🏐</div><h3>آماده‌سازی تیم‌ها برای مسابقه بزرگ</h3><div class="news-meta">۲ روز پیش • والیبال</div><p>تمام نام‌ها، اعداد و رویدادهای این بخش ساختگی هستند.</p></div>
+</div>
+</div>
+</section>
+
+<section id="about">
+<div class="container about">
+<div class="about-box reveal"><div class="eyebrow">ABOUT SPORTIX</div><h2>درباره پروژه</h2><p>این وب‌سایت یک پروژه نمایشی و آموزشی برای بررسی رابط کاربری پلتفرم‌های تحلیل مسابقات ورزشی است.</p><div class="notice">این Demo هیچ‌گونه خدمات شرط‌بندی یا تراکنش مالی ارائه نمی‌کند.</div></div>
+<div class="about-box reveal"><h2>فقط برای نمایش UI</h2><p>هیچ حساب کاربری واقعی، کیف پول، پرداخت، واریز، برداشت، درگاه بانکی، ارز دیجیتال، API خارجی یا Backend در این پروژه وجود ندارد. تمامی مسابقات، نتایج و آمار به‌صورت Mock در Front-end قرار گرفته‌اند.</p></div>
+</div>
+</section>
+</main>
+
+<footer><div class="container footer"><span>© 2026 SPORTIX Demo</span><span>Educational Front-end Prototype • Mock Data Only</span></div></footer>
+
+<div class="overlay" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+<div class="modal"><div class="modal-head"><h2 id="modalTitle">جزئیات مسابقه</h2><button class="close" id="closeModal" aria-label="بستن">×</button></div><div class="modal-content" id="modalContent"></div></div>
+</div>
+
+<script>
+const matches=[
+ {sport:'football',league:'Premier Demo League',date:'امروز • 18:30',a:'North City FC',b:'River United',ia:'🔵',ib:'🟢',status:'امروز',win:'61% / 39%',form:'W W D W L',recent:'2 - 1'},
+ {sport:'football',league:'Future Cup',date:'امروز • 21:00',a:'Blue Mountain',b:'Green Valley',ia:'🔷',ib:'🟩',status:'به‌زودی',win:'54% / 46%',form:'W D W L W',recent:'1 - 0'},
+ {sport:'basketball',league:'National Demo',date:'امروز • 19:45',a:'Tehran Waves',b:'Blue Stars',ia:'🏀',ib:'⭐',status:'امروز',win:'57% / 43%',form:'W W L W W',recent:'74 - 68'},
+ {sport:'volleyball',league:'Pro Demo League',date:'فردا • 17:00',a:'Persian Spikers',b:'Mountain VC',ia:'🏐',ib:'⛰️',status:'به‌زودی',win:'52% / 48%',form:'W L W W L',recent:'3 - 1'},
+ {sport:'tennis',league:'Open Demo',date:'فردا • 15:30',a:'Alex Stone',b:'Daniel Reed',ia:'🎾',ib:'🎾',status:'به‌زودی',win:'48% / 52%',form:'W W L L W',recent:'2 - 1'},
+ {sport:'basketball',league:'City Demo Cup',date:'فردا • 20:15',a:'Metro Lions',b:'Capital Foxes',ia:'🦁',ib:'🦊',status:'به‌زودی',win:'63% / 37%',form:'W W W D W',recent:'91 - 82'}
+];
+const grid=document.getElementById('matchesGrid');
+function renderMatches(){
+ const sport=document.querySelector('.filter.active').dataset.sport, q=document.getElementById('teamSearch').value.toLowerCase();
+ grid.innerHTML='';
+ matches.filter(m=>(sport==='all'||m.sport===sport)&&(m.a+' '+m.b).toLowerCase().includes(q)).forEach((m,i)=>{
+  grid.innerHTML+=`<article class="card reveal visible"><div class="match-top"><span class="sport">${m.sport.toUpperCase()}</span><span class="status">${m.status}</span></div><small>${m.league} • ${m.date}</small><div class="teams"><div><div class="team-icon">${m.ia}</div><strong>${m.a}</strong></div><span class="vs">VS</span><div><div class="team-icon">${m.ib}</div><strong>${m.b}</strong></div></div><div class="metrics"><div class="metric">Win Rate<b>${m.win}</b></div><div class="metric">Form<b>${m.form}</b></div><div class="metric">Recent<b>${m.recent}</b></div></div><button class="details" data-index="${matches.indexOf(m)}">مشاهده تحلیل</button></article>`;
+ });
+ document.querySelectorAll('.details').forEach(b=>b.onclick=()=>openModal(matches[b.dataset.index]));
+}
+document.querySelectorAll('.filter').forEach(btn=>btn.onclick=()=>{document.querySelectorAll('.filter').forEach(x=>x.classList.remove('active'));btn.classList.add('active');renderMatches()});
+document.getElementById('teamSearch').oninput=renderMatches;
+function openModal(m){document.getElementById('modalTitle').textContent=m.a+' × '+m.b;document.getElementById('modalContent').innerHTML=`<p><b>لیگ:</b> ${m.league}</p><p><b>زمان:</b> ${m.date}</p><p><b>Win Rate:</b> ${m.win}</p><p><b>فرم اخیر:</b> ${m.form}</p><p><b>نتیجه اخیر:</b> ${m.recent}</p><p style="margin-top:12px">این اطلاعات کاملاً ساختگی و صرفاً برای نمایش رابط کاربری هستند.</p>`;document.getElementById('modal').classList.add('show')}
+document.getElementById('closeModal').onclick=()=>document.getElementById('modal').classList.remove('show');
+document.getElementById('modal').onclick=e=>{if(e.target.id==='modal')e.target.classList.remove('show')};
+document.getElementById('menuBtn').onclick=()=>document.getElementById('navlinks').classList.toggle('open');
+document.querySelectorAll('.navlinks a').forEach(a=>a.onclick=()=>document.getElementById('navlinks').classList.remove('open'));
+document.getElementById('themeBtn').onclick=()=>{document.body.classList.toggle('light');document.getElementById('themeBtn').textContent=document.body.classList.contains('light')?'🌙':'☀️'};
+function clock(){document.getElementById('clock').textContent=new Date().toLocaleTimeString('fa-IR',{hour12:false})}setInterval(clock,1000);clock();
+const bars=[52,76,61,88,70,94,82];document.getElementById('chart').innerHTML=bars.map((h,i)=>`<div class="bar" style="height:${h}%;animation-delay:${i*.08}s"></div>`).join('');
+const observer=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12});document.querySelectorAll('.reveal').forEach(e=>observer.observe(e));
+renderMatches();
+window.addEventListener('load',()=>setTimeout(()=>document.getElementById('loading').style.opacity='0',350));
+window.addEventListener('load',()=>setTimeout(()=>document.getElementById('loading').style.display='none',850));
+</script>
+</body>
+</html>

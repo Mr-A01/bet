@@ -1,0 +1,1384 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BetScope | آشنایی و بررسی سایت‌های شرط‌بندی ورزشی</title>
+
+    <meta
+        name="description"
+        content="راهنمای آموزشی و بی‌طرفانه درباره سایت‌های شرط‌بندی ورزشی، انواع شرط‌ها، مفهوم ضریب، ریسک‌ها و قوانین."
+    >
+
+    <meta
+        name="keywords"
+        content="سایت شرط‌بندی, شرط‌بندی ورزشی, پیش‌بینی مسابقات ورزشی, ضریب شرط, ریسک قمار"
+    >
+
+    <meta name="robots" content="index, follow">
+
+    <!-- Replace example.com with your real domain -->
+    <link rel="canonical" href="https://example.com/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="BetScope | آشنایی و بررسی سایت‌های شرط‌بندی ورزشی">
+    <meta
+        property="og:description"
+        content="راهنمای آموزشی درباره سازوکار، انواع شرط‌ها، ریسک‌ها و جنبه‌های قانونی شرط‌بندی ورزشی."
+    >
+    <meta property="og:url" content="https://example.com/">
+
+    <meta name="twitter:card" content="summary_large_image">
+
+    <meta name="theme-color" content="#080b12">
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "سایت‌های شرط‌بندی ورزشی؛ راهنمای آشنایی و بررسی",
+        "description": "راهنمای آموزشی و بی‌طرفانه درباره سایت‌های شرط‌بندی ورزشی، انواع شرط‌ها، ریسک‌ها و قوانین.",
+        "author": {
+            "@type": "Organization",
+            "name": "BetScope"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "BetScope"
+        }
+    }
+    </script>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+                * {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: #080b12;
+    color: #edf2f7;
+    font-family: "Vazirmatn", system-ui, sans-serif;
+    line-height: 1.9;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    width: min(1120px, calc(100% - 40px));
+    margin: auto;
+}
+
+.narrow {
+    width: min(860px, calc(100% - 40px));
+}
+
+
+/* HEADER */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(8, 11, 18, 0.78);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255,255,255,.07);
+}
+
+.navbar {
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: #63e6be;
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+    color: #aeb8c6;
+    font-size: 14px;
+}
+
+.nav-links a {
+    transition: .2s;
+}
+
+.nav-links a:hover {
+    color: #63e6be;
+}
+
+.menu-button {
+    display: none;
+    border: none;
+    background: none;
+    color: white;
+    font-size: 27px;
+    cursor: pointer;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: calc(100vh - 72px);
+    position: relative;
+    display: grid;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-background {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(40,190,150,.14),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 10% 80%,
+            rgba(70,100,255,.11),
+            transparent 30%
+        );
+}
+
+.hero-grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1.08fr .92fr;
+    gap: 70px;
+    align-items: center;
+    padding: 80px 0;
+}
+
+.eyebrow {
+    color: #63e6be;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.hero h1 {
+    margin: 0 0 22px;
+    font-size: clamp(40px, 5vw, 68px);
+    line-height: 1.25;
+    letter-spacing: -2px;
+}
+
+.hero h1 span {
+    display: block;
+    color: #63e6be;
+}
+
+.hero-description {
+    max-width: 690px;
+    color: #aeb8c6;
+    font-size: 18px;
+}
+
+.primary-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 18px;
+    padding: 13px 22px;
+    border-radius: 12px;
+    background: #63e6be;
+    color: #07110e;
+    font-weight: 800;
+    transition: .25s;
+}
+
+.primary-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(99,230,190,.16);
+}
+
+.educational-note {
+    margin-top: 16px;
+    color: #758092;
+    font-size: 12px;
+}
+
+
+/* HERO VISUAL */
+
+.hero-visual {
+    position: relative;
+    height: 440px;
+    border: 1px solid rgba(255,255,255,.1);
+    border-radius: 28px;
+    overflow: hidden;
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.08),
+            rgba(255,255,255,.02)
+        );
+    box-shadow: 0 30px 80px rgba(0,0,0,.3);
+}
+
+.glow {
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    right: -70px;
+    top: -90px;
+    background: radial-gradient(
+        circle,
+        rgba(99,230,190,.22),
+        transparent 68%
+    );
+}
+
+.analytics-card {
+    position: absolute;
+    inset: 80px 40px 65px;
+    padding: 25px;
+    border: 1px solid rgba(255,255,255,.1);
+    border-radius: 20px;
+    background: rgba(5,8,14,.65);
+}
+
+.analytics-header,
+.analytics-footer {
+    display: flex;
+    justify-content: space-between;
+    color: #8792a4;
+    font-size: 11px;
+}
+
+.analytics-header strong {
+    color: #63e6be;
+}
+
+.bars {
+    height: 220px;
+    display: flex;
+    align-items: end;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.bars i {
+    flex: 1;
+    border-radius: 6px 6px 2px 2px;
+    background: linear-gradient(
+        to top,
+        rgba(99,230,190,.12),
+        #63e6be
+    );
+}
+
+.floating-card {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 11px 14px;
+    border: 1px solid rgba(255,255,255,.1);
+    border-radius: 13px;
+    background: rgba(12,17,27,.9);
+    box-shadow: 0 15px 35px rgba(0,0,0,.3);
+    font-size: 12px;
+}
+
+.floating-card small {
+    display: block;
+    color: #7e8999;
+}
+
+.floating-one {
+    left: 20px;
+    top: 30px;
+}
+
+.floating-two {
+    right: 18px;
+    bottom: 25px;
+}
+
+
+/* SECTIONS */
+
+.section {
+    padding: 100px 0;
+}
+
+.dark-section {
+    background: #0b0f18;
+}
+
+.section-heading {
+    margin-bottom: 40px;
+}
+
+.section-heading h2 {
+    margin: 0 0 8px;
+    font-size: 34px;
+    line-height: 1.35;
+}
+
+.section-heading > p:last-child {
+    color: #8f9aab;
+}
+
+
+/* ARTICLE */
+
+.article-card {
+    padding: 45px;
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 24px;
+    background: rgba(255,255,255,.025);
+}
+
+.article-card section + section {
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255,255,255,.07);
+}
+
+.article-card h2 {
+    margin: 0 0 9px;
+    font-size: 23px;
+}
+
+.article-card p {
+    margin: 0;
+    color: #b4bdca;
+}
+
+
+/* TYPE CARDS */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 14px;
+}
+
+.info-card {
+    min-height: 235px;
+    padding: 23px;
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 20px;
+    background: rgba(255,255,255,.035);
+    transition: .25s;
+}
+
+.info-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(99,230,190,.35);
+}
+
+.info-card span {
+    color: #63e6be;
+    font-size: 12px;
+}
+
+.info-card h3 {
+    margin: 18px 0 8px;
+}
+
+.info-card p {
+    color: #929dad;
+    font-size: 14px;
+}
+
+
+/* RISKS */
+
+.risk-panel {
+    display: grid;
+    grid-template-columns: .7fr 1.3fr;
+    gap: 40px;
+    padding: 45px;
+    border: 1px solid rgba(99,230,190,.16);
+    border-radius: 28px;
+    background: linear-gradient(
+        135deg,
+        #101925,
+        #0c111a
+    );
+}
+
+.risk-intro h2 {
+    margin: 0;
+    font-size: 35px;
+}
+
+.risk-intro p {
+    color: #8e99a9;
+}
+
+.risk-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.risk-grid div {
+    padding: 18px;
+    border: 1px solid rgba(255,255,255,.06);
+    border-radius: 16px;
+    background: rgba(255,255,255,.035);
+}
+
+.risk-grid span {
+    font-size: 20px;
+}
+
+.risk-grid strong,
+.risk-grid small {
+    display: block;
+}
+
+.risk-grid small {
+    margin-top: 3px;
+    color: #8b96a7;
+    font-size: 12px;
+}
+
+
+/* FAQ */
+
+.faq-list {
+    border-top: 1px solid rgba(255,255,255,.1);
+}
+
+details {
+    border-bottom: 1px solid rgba(255,255,255,.1);
+}
+
+summary {
+    display: flex;
+    justify-content: space-between;
+    padding: 21px 4px;
+    cursor: pointer;
+    list-style: none;
+    font-weight: 700;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary span {
+    color: #63e6be;
+    font-size: 20px;
+}
+
+details p {
+    margin: 0 4px 22px;
+    color: #969faf;
+}
+
+
+/* FOOTER */
+
+.footer {
+    padding-top: 60px;
+    background: #06090e;
+    border-top: 1px solid rgba(255,255,255,.07);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr .6fr 1fr;
+    gap: 50px;
+}
+
+.footer p {
+    color: #7f8a9a;
+    font-size: 13px;
+}
+
+.footer h3 {
+    font-size: 14px;
+}
+
+.footer-grid > div:nth-child(2) a {
+    display: block;
+    margin: 4px 0;
+    color: #8792a2;
+    font-size: 13px;
+}
+
+.copyright {
+    margin-top: 45px;
+    padding: 18px;
+    border-top: 1px solid rgba(255,255,255,.06);
+    text-align: center;
+    color: #596474;
+    font-size: 11px;
+}
+
+
+/* ANIMATION */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+        opacity .7s ease,
+        transform .7s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .risk-panel {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+/* MOBILE */
+
+@media (max-width: 680px) {
+
+    .container,
+    .narrow {
+        width: calc(100% - 28px);
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 72px;
+        left: 14px;
+        right: 14px;
+        flex-direction: column;
+        gap: 0;
+        padding: 9px;
+        border: 1px solid rgba(255,255,255,.1);
+        border-radius: 15px;
+        background: #0b1019;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 10px 12px;
+    }
+
+    .hero-grid {
+        padding: 60px 0;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .hero-visual {
+        height: 310px;
+    }
+
+    .analytics-card {
+        inset: 55px 25px 45px;
+        padding: 17px;
+    }
+
+    .bars {
+        height: 150px;
+    }
+
+    .section {
+        padding: 70px 0;
+    }
+
+    .article-card {
+        padding: 25px;
+    }
+
+    .cards,
+    .risk-grid,
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading h2 {
+        font-size: 29px;
+    }
+
+}
+    </style>
+</head>
+
+<body>
+
+<header class="site-header">
+
+    <nav class="navbar container">
+
+        <a href="#home" class="logo">
+            <span>Bet</span>Scope
+        </a>
+
+        <button
+            class="menu-button"
+            aria-label="باز کردن منوی سایت"
+            aria-expanded="false"
+        >
+            ☰
+        </button>
+
+        <div class="nav-links">
+
+            <a href="#home">خانه</a>
+
+            <a href="#about">درباره شرط‌بندی</a>
+
+            <a href="#types">انواع شرط‌ها</a>
+
+            <a href="#risks">ریسک‌ها</a>
+
+            <a href="#rules">قوانین و مسئولیت</a>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+<main>
+
+<!-- HERO -->
+
+<section id="home" class="hero">
+
+    <div class="hero-background"></div>
+
+    <div class="container hero-grid">
+
+        <div class="hero-content reveal">
+
+            <div class="eyebrow">
+                SPORTS ANALYTICS · EDUCATIONAL
+            </div>
+
+            <h1>
+                سایت‌های شرط‌بندی ورزشی؛
+                <span>راهنمای آشنایی و بررسی</span>
+            </h1>
+
+            <p class="hero-description">
+                یک راهنمای آموزشی و بی‌طرفانه برای شناخت سازوکار
+                سرویس‌های شرط‌بندی ورزشی، انواع شرط‌ها، مفهوم ضریب،
+                ریسک‌ها و ملاحظات قانونی.
+            </p>
+
+            <a href="#article" class="primary-button">
+                مطالعه مقاله
+                <span>↓</span>
+            </a>
+
+            <div class="educational-note">
+                این صفحه هیچ شرط، پرداخت، واریز، برداشت یا
+                پیش‌بینی پولی ارائه نمی‌کند.
+            </div>
+
+        </div>
+
+
+        <!-- Decorative analytics card -->
+
+        <div class="hero-visual reveal">
+
+            <div class="glow"></div>
+
+            <div class="analytics-card">
+
+                <div class="analytics-header">
+                    <span>SPORTS DATA</span>
+                    <strong>INFO</strong>
+                </div>
+
+                <div class="bars">
+
+                    <i style="height:35%"></i>
+                    <i style="height:52%"></i>
+                    <i style="height:43%"></i>
+                    <i style="height:70%"></i>
+                    <i style="height:60%"></i>
+                    <i style="height:84%"></i>
+                    <i style="height:68%"></i>
+
+                </div>
+
+                <div class="analytics-footer">
+                    <span>DATA</span>
+                    <span>RISK</span>
+                    <span>ODDS</span>
+                </div>
+
+            </div>
+
+            <div class="floating-card floating-one">
+                ⚽
+                <div>
+                    <strong>تحلیل مفهومی</strong>
+                    <small>بدون تراکنش مالی</small>
+                </div>
+            </div>
+
+            <div class="floating-card floating-two">
+                ⚠️
+                <div>
+                    <strong>مدیریت ریسک</strong>
+                    <small>آگاهی قبل از تصمیم</small>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ARTICLE -->
+
+<section id="article" class="section">
+
+    <div class="container narrow">
+
+        <div class="section-heading reveal">
+
+            <div class="eyebrow">
+                KNOWLEDGE BASE
+            </div>
+
+            <h2>
+                راهنمای جامع و بی‌طرفانه
+            </h2>
+
+            <p>
+                هدف این مقاله توضیح مفاهیم است، نه تبلیغ یا
+                تشویق به استفاده از خدمات شرط‌بندی.
+            </p>
+
+        </div>
+
+
+        <article class="article-card reveal">
+
+            <section id="about">
+
+                <h2>سایت شرط‌بندی چیست؟</h2>
+
+                <p>
+                    سایت شرط‌بندی ورزشی نوعی سرویس آنلاین است که در
+                    برخی حوزه‌های قضایی امکان ثبت پیش‌بینی روی نتایج
+                    رویدادهای ورزشی را فراهم می‌کند. در مدل‌های واقعی،
+                    نتیجه یک رویداد می‌تواند به تسویه مالی منجر شود.
+                    به همین دلیل بررسی قوانین، اعتبار سرویس و ریسک‌های
+                    مالی اهمیت زیادی دارد.
+                </p>
+
+            </section>
+
+
+            <section>
+
+                <h2>
+                    سایت‌های شرط‌بندی ورزشی چگونه کار می‌کنند؟
+                </h2>
+
+                <p>
+                    در سطح مفهومی، این سرویس‌ها رویدادهای ورزشی را
+                    فهرست می‌کنند، برای حالت‌های مختلف نتیجه ضریب
+                    تعیین می‌کنند و پس از مشخص شدن نتیجه، وضعیت
+                    پیش‌بینی را محاسبه می‌کنند. جزئیات این فرایند
+                    در سرویس‌ها و حوزه‌های قضایی مختلف متفاوت است.
+                </p>
+
+            </section>
+
+
+            <section>
+
+                <h2>
+                    انواع رایج شرط‌های ورزشی
+                </h2>
+
+                <p>
+                    از نمونه‌های رایج می‌توان به پیش‌بینی برنده،
+                    مساوی، مجموع گل‌ها و اختلاف امتیاز اشاره کرد.
+                    این اصطلاحات در ادامه صرفاً از نظر آموزشی
+                    توضیح داده می‌شوند.
+                </p>
+
+            </section>
+
+
+            <section>
+
+                <h2>
+                    مفهوم ضریب (Odds) چیست؟
+                </h2>
+
+                <p>
+                    ضریب یک نمایش عددی از قیمت یا بازده احتمالی
+                    یک نتیجه در بازار شرط‌بندی است. شکل نمایش ضریب
+                    در کشورهای مختلف متفاوت است و مقدار آن به معنی
+                    تضمین سود نیست.
+                </p>
+
+            </section>
+
+
+            <section>
+
+                <h2>
+                    تفاوت شرط‌بندی تفریحی، پیش‌بینی و قمار
+                </h2>
+
+                <p>
+                    این اصطلاحات در گفتار روزمره گاهی به جای یکدیگر
+                    استفاده می‌شوند، اما از نظر حقوقی و فنی می‌توانند
+                    تعریف‌های متفاوتی داشته باشند. تعریف دقیق آن‌ها
+                    به قانون و حوزه قضایی محل بستگی دارد.
+                </p>
+
+            </section>
+
+
+            <section>
+
+                <h2>
+                    ریسک‌های مالی و روانی
+                </h2>
+
+                <p>
+                    هیچ روش مطمئنی برای تضمین سود در شرط‌بندی وجود
+                    ندارد. از دست دادن پول، تصمیم‌گیری هیجانی،
+                    دنبال کردن زیان و شکل‌گیری رفتار اجباری از
+                    ریسک‌های مهم هستند.
+                </p>
+
+            </section>
+
+
+            <section id="rules">
+
+                <h2>
+                    اهمیت بررسی قوانین کشور محل زندگی
+                </h2>
+
+                <p>
+                    قوانین مربوط به قمار و شرط‌بندی آنلاین از کشوری
+                    به کشور دیگر متفاوت است و ممکن است در طول زمان
+                    تغییر کند. قوانین جاری و منابع رسمی حوزه قضایی
+                    مربوط باید بررسی شوند.
+                </p>
+
+            </section>
+
+
+            <section>
+
+                <h2>
+                    چرا نباید به سایت‌های ناشناس اعتماد کرد؟
+                </h2>
+
+                <p>
+                    سرویس‌های ناشناس ممکن است اطلاعات شفافی درباره
+                    مالکیت، مجوز، سیاست حریم خصوصی یا نحوه رسیدگی
+                    به شکایت ارائه نکنند. ادعاهای «سود تضمینی» نیز
+                    باید با احتیاط بررسی شوند.
+                </p>
+
+            </section>
+
+
+            <section>
+
+                <h2>
+                    جمع‌بندی
+                </h2>
+
+                <p>
+                    شناخت اصطلاحات و سازوکارهای شرط‌بندی به معنی
+                    توصیه به استفاده از آن‌ها نیست. بررسی قوانین،
+                    حفاظت از اطلاعات شخصی، شناخت ریسک مالی و توجه
+                    به سلامت رفتاری، بخش‌های مهم یک نگاه آگاهانه
+                    به این موضوع هستند.
+                </p>
+
+            </section>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- TYPES -->
+
+<section id="types" class="section dark-section">
+
+    <div class="container">
+
+        <div class="section-heading reveal">
+
+            <div class="eyebrow">
+                CONCEPTS
+            </div>
+
+            <h2>
+                انواع شرط‌ها، فقط در حد مفهوم
+            </h2>
+
+            <p>
+                این کارت‌ها هیچ ابزار ثبت شرط یا محاسبه پول واقعی ندارند.
+            </p>
+
+        </div>
+
+
+        <div class="cards">
+
+            <div class="info-card reveal">
+                <span>01</span>
+                <h3>برد / باخت</h3>
+                <p>
+                    پیش‌بینی اینکه کدام تیم یا بازیکن برنده
+                    یک رویداد ورزشی خواهد شد.
+                </p>
+            </div>
+
+            <div class="info-card reveal">
+                <span>02</span>
+                <h3>مساوی</h3>
+                <p>
+                    بازاری که در آن نتیجه مساوی به عنوان
+                    یکی از حالت‌های ممکن در نظر گرفته می‌شود.
+                </p>
+            </div>
+
+            <div class="info-card reveal">
+                <span>03</span>
+                <h3>مجموع گل‌ها</h3>
+                <p>
+                    پیش‌بینی اینکه مجموع گل‌های یک مسابقه
+                    نسبت به یک مقدار مشخص بیشتر یا کمتر باشد.
+                </p>
+            </div>
+
+            <div class="info-card reveal">
+                <span>04</span>
+                <h3>اختلاف امتیاز</h3>
+                <p>
+                    مقایسه اختلاف نهایی امتیاز دو تیم یا
+                    بازیکن در یک مسابقه.
+                </p>
+            </div>
+
+            <div class="info-card reveal">
+                <span>05</span>
+                <h3>پیش‌بینی نتیجه</h3>
+                <p>
+                    پیش‌بینی یک نتیجه مشخص از یک رویداد،
+                    مانند نتیجه نهایی مسابقه.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- RISKS -->
+
+<section id="risks" class="section">
+
+    <div class="container">
+
+        <div class="risk-panel reveal">
+
+            <div class="risk-intro">
+
+                <div class="eyebrow">
+                    RISK AWARENESS
+                </div>
+
+                <h2>
+                    ریسک‌ها و نکات مهم
+                </h2>
+
+                <p>
+                    تصمیم آگاهانه با شناخت محدودیت‌ها و
+                    خطرات شروع می‌شود.
+                </p>
+
+            </div>
+
+
+            <div class="risk-grid">
+
+                <div>
+                    <span>💸</span>
+                    <strong>از دست دادن پول</strong>
+                    <small>
+                        نتیجه همیشه قابل پیش‌بینی یا تضمین‌شده نیست.
+                    </small>
+                </div>
+
+                <div>
+                    <span>🧠</span>
+                    <strong>رفتار اعتیادآور</strong>
+                    <small>
+                        دنبال کردن زیان می‌تواند آسیب‌زا باشد.
+                    </small>
+                </div>
+
+                <div>
+                    <span>📢</span>
+                    <strong>تبلیغات گمراه‌کننده</strong>
+                    <small>
+                        ادعاهای سود قطعی را با احتیاط بررسی کنید.
+                    </small>
+                </div>
+
+                <div>
+                    <span>🛡️</span>
+                    <strong>سایت‌های جعلی</strong>
+                    <small>
+                        اطلاعات مالکیت و مجوز را بررسی کنید.
+                    </small>
+                </div>
+
+                <div>
+                    <span>🔐</span>
+                    <strong>حریم خصوصی</strong>
+                    <small>
+                        دسترسی به اطلاعات حساس را جدی بگیرید.
+                    </small>
+                </div>
+
+                <div>
+                    <span>⚖️</span>
+                    <strong>تفاوت قوانین</strong>
+                    <small>
+                        قانون محل زندگی معیار اصلی است.
+                    </small>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FAQ -->
+
+<section id="faq" class="section">
+
+    <div class="container narrow">
+
+        <div class="section-heading reveal">
+
+            <div class="eyebrow">
+                FAQ
+            </div>
+
+            <h2>
+                سؤالات متداول
+            </h2>
+
+        </div>
+
+
+        <div class="faq-list reveal">
+
+            <details>
+                <summary>
+                    ضریب شرط چیست؟
+                    <span>+</span>
+                </summary>
+
+                <p>
+                    ضریب، نمایش عددی قیمت یا بازده احتمالی
+                    یک نتیجه در بازار شرط‌بندی است و
+                    تضمین‌کننده سود نیست.
+                </p>
+            </details>
+
+
+            <details>
+                <summary>
+                    آیا شرط‌بندی همیشه باعث سود می‌شود؟
+                    <span>+</span>
+                </summary>
+
+                <p>
+                    خیر. شرط‌بندی دارای ریسک مالی است و
+                    هیچ نتیجه یا سودی را نمی‌توان تضمین کرد.
+                </p>
+            </details>
+
+
+            <details>
+                <summary>
+                    آیا سایت‌های شرط‌بندی قانونی هستند؟
+                    <span>+</span>
+                </summary>
+
+                <p>
+                    قانونی بودن به کشور، حوزه قضایی و نوع
+                    سرویس بستگی دارد. قوانین و منابع رسمی
+                    همان محل باید بررسی شوند.
+                </p>
+            </details>
+
+
+            <details>
+                <summary>
+                    چگونه می‌توان یک سایت ناشناس را تشخیص داد؟
+                    <span>+</span>
+                </summary>
+
+                <p>
+                    نبود اطلاعات مالکیت و مجوز، شرایط مبهم،
+                    ادعاهای سود تضمینی و نبود مسیر روشن
+                    برای شکایت از مواردی هستند که نیاز
+                    به بررسی بیشتر دارند.
+                </p>
+            </details>
+
+
+            <details>
+                <summary>
+                    آیا اطلاعات کارت بانکی در سایت‌های ناشناس امن است؟
+                    <span>+</span>
+                </summary>
+
+                <p>
+                    نباید امنیت اطلاعات حساس را صرفاً از
+                    ظاهر یک سایت نتیجه گرفت. اعتبار سرویس،
+                    سیاست حریم خصوصی و الزامات قانونی باید
+                    از منابع معتبر بررسی شوند.
+                </p>
+            </details>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+    <div class="container footer-grid">
+
+        <div>
+            <a class="logo" href="#home">
+                <span>Bet</span>Scope
+            </a>
+
+            <p>
+                دانش‌نامه‌ای کوچک برای آشنایی مسئولانه
+                با مفاهیم شرط‌بندی ورزشی.
+            </p>
+        </div>
+
+
+        <div>
+
+            <h3>
+                دسترسی سریع
+            </h3>
+
+            <a href="#article">مقاله</a>
+            <a href="#types">انواع شرط‌ها</a>
+            <a href="#risks">ریسک‌ها</a>
+            <a href="#faq">سؤالات متداول</a>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                توضیح مهم
+            </h3>
+
+            <p>
+                این وب‌سایت صرفاً با هدف آموزشی و
+                اطلاع‌رسانی ساخته شده است و هیچ سرویس
+                شرط‌بندی یا تراکنش مالی ارائه نمی‌کند.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="copyright">
+        © 2026 BetScope · Educational Demo
+    </div>
+
+</footer>
+
+
+<script>
+    // Mobile navigation
+
+    const menuButton = document.querySelector(".menu-button");
+    const navLinks = document.querySelector(".nav-links");
+
+    menuButton.addEventListener("click", () => {
+
+        const isOpen = navLinks.classList.toggle("open");
+
+        menuButton.setAttribute(
+            "aria-expanded",
+            isOpen.toString()
+        );
+
+    });
+
+
+    // Close mobile menu after clicking a link
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            navLinks.classList.remove("open");
+
+            menuButton.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+        });
+
+    });
+
+
+    // Scroll reveal animation
+
+    const observer = new IntersectionObserver(
+        entries => {
+
+            entries.forEach(entry => {
+
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                }
+
+            });
+
+        },
+        {
+            threshold: 0.12
+        }
+    );
+
+
+    document
+        .querySelectorAll(".reveal")
+        .forEach(element => observer.observe(element));
+
+
+    // FAQ plus / minus icon
+
+    document.querySelectorAll("details").forEach(item => {
+
+        item.addEventListener("toggle", () => {
+
+            const icon = item.querySelector("summary span");
+
+            if (!icon) return;
+
+            icon.textContent = item.open
+                ? "−"
+                : "+";
+
+        });
+
+    });
+</script>
+
+
+</body>
+</html>
